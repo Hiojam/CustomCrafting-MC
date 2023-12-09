@@ -6,7 +6,7 @@
 
   <groupId>com.hiojam.rpgcore</groupId>
   <artifactId>CustomCrafting</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
   <packaging>jar</packaging>
 
   <name>CustomCrafting</name>
@@ -23,8 +23,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
-          <source>${java.version}</source>
-          <target>${java.version}</target>
+          <source>16</source>
+          <target>16</target>
         </configuration>
       </plugin>
       <plugin>
@@ -68,6 +68,11 @@
               <enabled>true</enabled>
           </snapshots>
       </repository>
+      <repository>
+          <id>codemc-repo</id>
+          <url>https://repo.codemc.org/repository/maven-public/</url>
+          <layout>default</layout>
+      </repository>
   </repositories>
 
   <dependencies>
@@ -78,10 +83,26 @@
           <scope>provided</scope>
       </dependency>
       <dependency>
+          <groupId>org.projectlombok</groupId>
+          <artifactId>lombok</artifactId>
+          <version>1.18.30</version>
+          <scope>provided</scope>
+      </dependency>
+      <dependency>
           <groupId>dev.roxxion</groupId>
           <artifactId>Api</artifactId>
-          <version>0.3.1</version>
+          <version>0.1.4</version>
           <scope>provided</scope>
+      </dependency>
+      <dependency>
+          <groupId>de.tr7zw</groupId>
+          <artifactId>item-nbt-api</artifactId>
+          <version>2.12.0</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.commons</groupId>
+          <artifactId>commons-lang3</artifactId>
+          <version>3.12.0</version>
       </dependency>
   </dependencies>
 </project>
