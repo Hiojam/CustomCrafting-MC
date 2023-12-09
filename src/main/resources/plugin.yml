@@ -1,0 +1,4 @@
+name: CustomCrafting
+version: '${project.version}'
+main: com.hiojam.rpgcore.customcrafting.CustomCrafting
+api-version: '1.20'
